@@ -78,7 +78,8 @@ void setup(void)
     init_display();
     
     lcd.setCursor(0, 0);  //LINE 1, ADDRESS 0
-    //lcd.print("Hello World");
+
+    delay(5000);    
 }
 
 
@@ -94,22 +95,22 @@ void loop(void)
 
   delay(1000);
   Serial.print(temperature,1);
-  Serial.println(",");   
+  Serial.print(",");   
   Serial.print(humid,0);
-  Serial.println(",");   
+  Serial.print(",");   
   Serial.print(pressure,0);
-  Serial.println(",");   
+  Serial.print(",");   
   Serial.print(CO2,0);
-  Serial.println(",");     
+  Serial.print(",");     
   Serial.print(TVOC,0);
   Serial.println("");   
 
   lcd.setCursor(0, 0);
   lcd.print(temperature,1);
-  lcd.println(" *C");
-  lcd.setCursor(0, 1);
+  lcd.print(" *C ");
+  lcd.setCursor(1, 0);
   lcd.print(CO2,0);
-  lcd.println(" ppm");
+  lcd.print(" ppm ");
 
 
 }
